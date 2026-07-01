@@ -1,0 +1,465 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* ═══════════════════════════════════════════════════════════════
+     Material Design 3 — Teal Tonal Palette
+     ═══════════════════════════════════════════════════════════════ */
+
+  /* Primary */
+  --color-primary: #006B5E;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #00574D;
+  --color-primary-light: #A0F1E3;
+  --color-on-primary-light: #00201B;
+  --color-primary-container: #7DF8E7;
+  --color-on-primary-container: #00201B;
+
+  /* Secondary */
+  --color-secondary: #4A635C;
+  --color-secondary-foreground: #ffffff;
+  --color-secondary-light: #CCE8E0;
+  --color-secondary-container: #CCE8E0;
+  --color-on-secondary-container: #07201A;
+
+  /* Tertiary — Amber */
+  --color-tertiary: #7D5700;
+  --color-tertiary-foreground: #ffffff;
+  --color-tertiary-light: #FFDEA9;
+  --color-tertiary-container: #FFDEA9;
+  --color-on-tertiary-container: #281900;
+
+  /* Success */
+  --color-success: #2E7D32;
+  --color-success-foreground: #ffffff;
+  --color-success-light: #C8E6C9;
+
+  /* Warning */
+  --color-warning: #ED6C02;
+  --color-warning-foreground: #ffffff;
+  --color-warning-light: #FFECB3;
+
+  /* Danger */
+  --color-danger: #D32F2F;
+  --color-danger-foreground: #ffffff;
+  --color-danger-light: #FFCDD2;
+
+  /* Background & Surface */
+  --color-background: #F7FAF9;
+  --color-foreground: #191C1B;
+  --color-muted: #EFF1EF;
+  --color-muted-foreground: #414945;
+  --color-border: #C1C9C5;
+
+  /* MD3 Surface Tonal System */
+  --color-surface: #F7FAF9;
+  --color-surface-dim: #D7DBD9;
+  --color-surface-bright: #F7FAF9;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-surface-container-low: #F1F5F3;
+  --color-surface-container: #EBEFED;
+  --color-surface-container-high: #E5E9E7;
+  --color-surface-container-highest: #E0E3E1;
+  --color-surface-variant: #DAE5E1;
+  --color-on-surface: #191C1B;
+  --color-on-surface-variant: #3F4945;
+
+  /* Outline */
+  --color-outline: #6F7977;
+  --color-outline-variant: #BFC9C5;
+
+  /* Inverse */
+  --color-inverse-surface: #2E312F;
+  --color-inverse-on-surface: #EFF1EF;
+  --color-inverse-primary: #60DBCA;
+
+  /* Sidebar (dark navigation) */
+  --color-sidebar: #111413;
+  --color-sidebar-foreground: #E0E3E1;
+  --color-sidebar-active: #A0F1E3;
+  --color-sidebar-hover: #1E2523;
+
+  /* Card */
+  --color-card: #FFFFFF;
+  --color-card-foreground: #191C1B;
+  --color-card-elevated: #FFFFFF;
+
+  /* MD3 Elevation Shadows */
+  --shadow-1: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-2: 0 1px 2px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.1);
+  --shadow-3: 0 4px 8px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-4: 0 6px 12px rgba(0,0,0,0.08), 0 4px 8px rgba(0,0,0,0.06);
+  --shadow-5: 0 12px 24px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.06);
+
+  /* MD3 State Layers */
+  --state-layer-hover: 0.08;
+  --state-layer-pressed: 0.12;
+  --state-layer-focus: 0.12;
+  --state-layer-drag: 0.16;
+
+  /* Font */
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+
+  /* MD3 Border Radius */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Dark Mode — MD3 Dark Tonal Palette
+   ═══════════════════════════════════════════════════════════════ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #84D5C7;
+    --color-primary-foreground: #003730;
+    --color-primary-hover: #A0F1E3;
+    --color-primary-light: #004F44;
+    --color-on-primary-light: #A0F1E3;
+    --color-primary-container: #004F44;
+    --color-on-primary-container: #A0F1E3;
+
+    --color-secondary: #B1CCC4;
+    --color-secondary-foreground: #1C3530;
+    --color-secondary-light: #334B45;
+    --color-secondary-container: #334B45;
+    --color-on-secondary-container: #CCE8E0;
+
+    --color-tertiary: #F5BF48;
+    --color-tertiary-foreground: #422D00;
+    --color-tertiary-light: #5D4200;
+    --color-tertiary-container: #5D4200;
+    --color-on-tertiary-container: #FFDEA9;
+
+    --color-success: #81C784;
+    --color-success-foreground: #1B5E20;
+    --color-success-light: #2E7D32;
+
+    --color-warning: #FFB74D;
+    --color-warning-foreground: #4A2800;
+    --color-warning-light: #F57C00;
+
+    --color-danger: #EF9A9A;
+    --color-danger-foreground: #601410;
+    --color-danger-light: #C62828;
+
+    --color-background: #111413;
+    --color-foreground: #E0E3E1;
+    --color-muted: #1B1F1D;
+    --color-muted-foreground: #A0A8A5;
+    --color-border: #3F4945;
+
+    --color-surface: #111413;
+    --color-surface-dim: #111413;
+    --color-surface-bright: #373937;
+    --color-surface-container-lowest: #0C0F0E;
+    --color-surface-container-low: #191C1B;
+    --color-surface-container: #1D211F;
+    --color-surface-container-high: #272B29;
+    --color-surface-container-highest: #323634;
+    --color-surface-variant: #434947;
+    --color-on-surface: #E0E3E1;
+    --color-on-surface-variant: #BFC9C5;
+
+    --color-outline: #899391;
+    --color-outline-variant: #434947;
+
+    --color-inverse-surface: #E0E3E1;
+    --color-inverse-on-surface: #191C1B;
+    --color-inverse-primary: #006B5E;
+
+    --color-sidebar: #0C0F0E;
+    --color-sidebar-foreground: #E0E3E1;
+    --color-sidebar-active: #84D5C7;
+    --color-sidebar-hover: #1E2523;
+
+    --color-card: #272B29;
+    --color-card-foreground: #E0E3E1;
+    --color-card-elevated: #323634;
+
+    --shadow-1: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.24);
+    --shadow-2: 0 2px 6px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.24);
+    --shadow-3: 0 4px 12px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.24);
+    --shadow-4: 0 8px 16px rgba(0,0,0,0.3), 0 6px 12px rgba(0,0,0,0.24);
+    --shadow-5: 0 16px 32px rgba(0,0,0,0.35), 0 12px 24px rgba(0,0,0,0.24);
+
+    --state-layer-hover: 0.08;
+    --state-layer-pressed: 0.12;
+    --state-layer-focus: 0.12;
+    --state-layer-drag: 0.16;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Base Styles
+   ═══════════════════════════════════════════════════════════════ */
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), "Inter", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MD3 Utility Classes
+   ═══════════════════════════════════════════════════════════════ */
+@layer utilities {
+  /* ── Elevation ── */
+  .elevation-0 { box-shadow: none; }
+  .elevation-1 { box-shadow: var(--shadow-1); }
+  .elevation-2 { box-shadow: var(--shadow-2); }
+  .elevation-3 { box-shadow: var(--shadow-3); }
+  .elevation-4 { box-shadow: var(--shadow-4); }
+  .elevation-5 { box-shadow: var(--shadow-5); }
+
+  /* ── MD3 Cards ── */
+  .md3-card {
+    background: var(--color-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-outline-variant);
+    transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1),
+                transform 200ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .md3-card-elevated {
+    background: var(--color-card-elevated);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+    border: none;
+    transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1),
+                transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .md3-card-elevated:hover {
+    box-shadow: var(--shadow-3);
+  }
+
+  .md3-card-filled {
+    background: var(--color-surface-container-highest);
+    border-radius: var(--radius-lg);
+    border: none;
+    transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .md3-card-outlined {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-outline-variant);
+    transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* ── MD3 Button ── */
+  .md3-button {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    border-radius: var(--radius-full);
+    transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1),
+                transform 100ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .md3-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: currentColor;
+    opacity: 0;
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  .md3-button:hover::before { opacity: var(--state-layer-hover); }
+  .md3-button:focus-visible::before { opacity: var(--state-layer-focus); }
+  .md3-button:active::before { opacity: var(--state-layer-pressed); }
+  .md3-button:active { transform: scale(0.98); }
+  .md3-button:disabled { opacity: 0.38; pointer-events: none; }
+
+  /* ── MD3 State Layer ── */
+  .state-layer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .state-layer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: currentColor;
+    opacity: 0;
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  .state-layer:hover::after { opacity: var(--state-layer-hover); }
+  .state-layer:active::after { opacity: var(--state-layer-pressed); }
+
+  /* ── MD3 Focus Ring ── */
+  .md3-focus-ring {
+    outline: none;
+  }
+  .md3-focus-ring:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  /* ── MD3 Surface Containers ── */
+  .surface { background: var(--color-surface); }
+  .surface-dim { background: var(--color-surface-dim); }
+  .surface-container-lowest { background: var(--color-surface-container-lowest); }
+  .surface-container-low { background: var(--color-surface-container-low); }
+  .surface-container { background: var(--color-surface-container); }
+  .surface-container-high { background: var(--color-surface-container-high); }
+  .surface-container-highest { background: var(--color-surface-container-highest); }
+
+  /* ── MD3 Typography Scale ── */
+  .text-display-large  { font-size: 3.5625rem; font-weight: 400; letter-spacing: -0.25px; line-height: 1.12; }
+  .text-display-medium { font-size: 2.8125rem; font-weight: 400; letter-spacing: 0; line-height: 1.16; }
+  .text-display-small  { font-size: 2.25rem;   font-weight: 400; letter-spacing: 0; line-height: 1.22; }
+
+  .text-headline-large  { font-size: 2rem;    font-weight: 500; letter-spacing: 0; line-height: 1.25; }
+  .text-headline-medium { font-size: 1.75rem; font-weight: 500; letter-spacing: 0; line-height: 1.29; }
+  .text-headline-small  { font-size: 1.5rem;  font-weight: 500; letter-spacing: 0; line-height: 1.33; }
+
+  .text-title-large  { font-size: 1.375rem; font-weight: 500; letter-spacing: 0;      line-height: 1.27; }
+  .text-title-medium { font-size: 1rem;     font-weight: 500; letter-spacing: 0.01em; line-height: 1.5; }
+  .text-title-small  { font-size: 0.875rem; font-weight: 500; letter-spacing: 0.01em; line-height: 1.43; }
+
+  .text-body-large  { font-size: 1rem;     font-weight: 400; letter-spacing: 0.03em; line-height: 1.5; }
+  .text-body-medium { font-size: 0.875rem; font-weight: 400; letter-spacing: 0.02em; line-height: 1.43; }
+  .text-body-small  { font-size: 0.75rem;  font-weight: 400; letter-spacing: 0.04em; line-height: 1.33; }
+
+  .text-label-large  { font-size: 0.875rem; font-weight: 500; letter-spacing: 0.01em; line-height: 1.43; }
+  .text-label-medium { font-size: 0.75rem;  font-weight: 500; letter-spacing: 0.05em; line-height: 1.33; }
+  .text-label-small  { font-size: 0.6875rem;font-weight: 500; letter-spacing: 0.05em; line-height: 1.45; }
+
+  /* ── MD3 Transitions ── */
+  .md3-transition {
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .md3-transition-colors {
+    transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1),
+                color 200ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .md3-transition-transform {
+    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* ── MD3 Divider ── */
+  .md3-divider {
+    height: 1px;
+    background: var(--color-outline-variant);
+    border: none;
+    margin: 0;
+  }
+
+  /* ── MD3 Shape ── */
+  .md3-shape-xs { border-radius: var(--radius-xs); }
+  .md3-shape-sm { border-radius: var(--radius-sm); }
+  .md3-shape-md { border-radius: var(--radius-md); }
+  .md3-shape-lg { border-radius: var(--radius-lg); }
+  .md3-shape-xl { border-radius: var(--radius-xl); }
+  .md3-shape-2xl { border-radius: var(--radius-2xl); }
+  .md3-shape-full { border-radius: var(--radius-full); }
+
+  /* ── Stagger Animation ── */
+  .stagger-item {
+    animation: md3FadeIn 300ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+  }
+  .stagger-item:nth-child(1)  { animation-delay: 0ms; }
+  .stagger-item:nth-child(2)  { animation-delay: 30ms; }
+  .stagger-item:nth-child(3)  { animation-delay: 60ms; }
+  .stagger-item:nth-child(4)  { animation-delay: 90ms; }
+  .stagger-item:nth-child(5)  { animation-delay: 120ms; }
+  .stagger-item:nth-child(6)  { animation-delay: 150ms; }
+  .stagger-item:nth-child(7)  { animation-delay: 180ms; }
+  .stagger-item:nth-child(8)  { animation-delay: 210ms; }
+  .stagger-item:nth-child(9)  { animation-delay: 240ms; }
+  .stagger-item:nth-child(10) { animation-delay: 270ms; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Keyframes
+   ═══════════════════════════════════════════════════════════════ */
+@keyframes md3FadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes md3ScaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes md3SlideInLeft {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes md3SlideInRight {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes md3Ripple {
+  from { transform: scale(0); opacity: 0.35; }
+  to   { transform: scale(4); opacity: 0; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Reduced Motion
+   ═══════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  .stagger-item {
+    animation: none;
+    opacity: 1;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Scrollbar Styling
+   ═══════════════════════════════════════════════════════════════ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-outline-variant);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-outline);
+}
