@@ -29,7 +29,7 @@ export default async function AttendancePage(props: {
   if (selectedBatchId) {
     const { data: enrollments } = await supabase.from("enrollments").select("student_id, students!inner(full_name)").eq("batch_id", selectedBatchId).eq("status", "active").order("enrolled_at")
     students = (enrollments ?? []).map((e: Record<string, unknown>) => {
-      const studentData = ((e.students as Record<string, unknown>[]) ?? [])[0] ?? {}
+      const studentData = (e.students as Record<string, unknown>) ?? {}
       return { id: e.student_id as string, full_name: (studentData.full_name as string) ?? "Unknown" }
     })
     const { data: attRecords } = await supabase.from("attendance").select("student_id, status").eq("batch_id", selectedBatchId).eq("date", selectedDate)

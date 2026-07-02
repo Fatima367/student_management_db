@@ -23,7 +23,7 @@ export default async function AssessmentPage(props: {
 
   const { data: enrollments } = await supabase.from("enrollments").select("student_id, students!inner(full_name)").eq("batch_id", assessment.batch_id).eq("status", "active").order("enrolled_at")
   const students = (enrollments ?? []).map((e: Record<string, unknown>) => {
-    const studentData = ((e.students as Record<string, unknown>[]) ?? [])[0] ?? {}
+    const studentData = (e.students as Record<string, unknown>) ?? {}
     return { id: e.student_id as string, full_name: (studentData.full_name as string) ?? "Unknown" }
   })
 
